@@ -17,102 +17,88 @@
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     .container {
+      flex: 1;
       max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
-
-    /* เมนูในแนวนอนจากซ้ายไปขวา */
     nav {
       background: #007bff;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px; /* เพิ่มระยะห่างซ้ายขวา */
-      position: relative;
-      z-index: 10;
+      padding: 15px 30px;
       width: 100%;
     }
-
-    /* ให้ลิงก์ในเมนูมีพื้นที่และสวยงาม */
     nav a {
       color: white;
       text-decoration: none;
       padding: 10px 20px;
-      display: inline-block;
       font-size: 18px;
       font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      margin: 0 10px; /* เพิ่มระยะห่างระหว่างเมนู */
+      transition: 0.3s ease;
+      margin: 0 10px;
     }
-
     nav a:hover {
       background-color: #0056b3;
       border-radius: 5px;
-      transform: scale(1.1); /* ขยายขนาดเมื่อ hover */
+      transform: scale(1.1);
     }
-
-    /* กำหนดระยะห่างจากเนื้อหาด้านล่าง */
     .image-container {
       margin-top: 40px;
       text-align: center;
     }
-
-    /* ตั้งชื่อสำหรับภาพ */
     .image-title {
       font-size: 24px;
       font-weight: bold;
-      text-align: center;
-      margin-bottom: 20px;
-      padding: 10px;
       background: #007bff;
       color: white;
+      padding: 15px 20px;
       border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 15px;
     }
-
-    /* รูปภาพ */
     .image-container img {
       max-width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
     }
-
-    /* ปรับแต่งสำหรับหน้าจอขนาดเล็ก */
     @media (max-width: 768px) {
       nav {
-        flex-direction: row; /* เรียงเมนูในแนวนอน */
-        justify-content: space-between; /* ให้เมนูจัดระยะห่างให้พอดี */
+        flex-direction: row;
+        justify-content: space-between;
         padding: 10px 15px;
       }
       nav a {
-        font-size: 16px; /* ปรับขนาดฟอนต์ให้เล็กลงบนมือถือ */
-        padding: 8px 12px; /* ปรับพื้นที่ในเมนูให้เหมาะสม */
+        font-size: 16px;
+        padding: 8px 12px;
       }
     }
-
-    /* ฟุตเตอร์ */
     .footer-description {
       background-color: #333;
       color: #fff;
       text-align: center;
       padding: 15px 0;
-      position: relative;
+      position: fixed;
       bottom: 0;
+      left: 0;
       width: 100%;
       font-size: 14px;
       box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     }
-
     .footer-description p {
       margin: 0;
       font-family: 'K2D', sans-serif;
     }
-
     .footer-description p:hover {
-      color: #f1c40f; /* สีเมื่อมีการ hover */
+      color: #f1c40f;
       text-decoration: underline;
     }
   </style>
@@ -126,14 +112,12 @@
   </nav>
   <div class="container">
     <div class="image-container">
-      <div class="image-title">แสดงภาพแทนตารางข้อมูลสมาชิก</div>
-      <!-- ใช้ <img> สำหรับแสดงภาพแทนตาราง -->
+      <div class="image-title">แสดงภาพ</div>
       <img src="https://img2.pic.in.th/pic/Messenger_creation_E04D07C6-F8DA-4622-8D09-EF18154371F0408b6c8810911e34.jpeg" alt="Messenger Creation" />
     </div>
-    <!-- Footer Section ที่แสดงคำอธิบายที่กลางจอล่างสุด -->
-    <div class="footer-description">
-      <p>&copy; 2025 บริษัทตัวอย่าง | All rights reserved</p>
-    </div>
+  </div>
+  <div class="footer-description">
+    <p>&copy; 2025 บริษัทตัวอย่าง | All rights reserved</p>
   </div>
 </body>
 </html>
