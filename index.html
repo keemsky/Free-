@@ -3,54 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="เว็บไซต์ที่มีการตกแต่งด้วย K2D CSS และรองรับมือถือ">
-  <meta name="keywords" content="HTML, CSS, Responsive, K2D">
   <title>เว็บไซต์ของฉัน</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/k2d@latest/dist/k2d.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
   <style>
-    body {
-      font-family: 'K2D', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'K2D', sans-serif;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-    }
-    .container {
-      flex: 1;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #f9f9f9;
     }
     nav {
       background: #007bff;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      padding: 15px 30px;
-      width: 100%;
+      padding: 10px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      padding: 10px 20px;
       font-size: 18px;
       font-weight: bold;
-      transition: 0.3s ease;
-      margin: 0 10px;
+      transition: 0.3s;
     }
     nav a:hover {
-      background-color: #0056b3;
+      background: #0056b3;
       border-radius: 5px;
-      transform: scale(1.1);
+      padding: 5px;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
     .image-container {
-      margin-top: 40px;
       text-align: center;
     }
     .image-title {
@@ -58,48 +55,24 @@
       font-weight: bold;
       background: #007bff;
       color: white;
-      padding: 15px 20px;
+      padding: 6px 12px;
       border-radius: 8px;
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
     .image-container img {
       max-width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-top: 10px;
-    }
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 15px;
-      }
-      nav a {
-        font-size: 16px;
-        padding: 8px 12px;
-      }
     }
     .footer-description {
-      background-color: #333;
-      color: #fff;
+      background: #333;
+      color: white;
       text-align: center;
-      padding: 15px 0;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+      padding: 10px;
       font-size: 14px;
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .footer-description p {
-      margin: 0;
-      font-family: 'K2D', sans-serif;
-    }
-    .footer-description p:hover {
-      color: #f1c40f;
-      text-decoration: underline;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -113,7 +86,7 @@
   <div class="container">
     <div class="image-container">
       <div class="image-title">แสดงภาพ</div>
-      <img src="https://img2.pic.in.th/pic/Messenger_creation_E04D07C6-F8DA-4622-8D09-EF18154371F0408b6c8810911e34.jpeg" alt="Messenger Creation" />
+      <img src="https://img2.pic.in.th/pic/Messenger_creation_E04D07C6-F8DA-4622-8D09-EF18154371F0408b6c8810911e34.jpeg" alt="Messenger Creation">
     </div>
   </div>
   <div class="footer-description">
